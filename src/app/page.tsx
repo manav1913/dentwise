@@ -1,21 +1,23 @@
-import { Button } from "@/components/ui/button";
-import { Show, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
-import Image from "next/image";
+import HowItWorks from "@/components/landing/HowItWorks";
+import Header from "@/components/landing/Header";
+import Hero from "@/components/landing/Hero";
+import WhatToAsk from "@/components/landing/WhatToAsk";
+import PricingSection from "@/components/landing/PricingSection";
+import CTA from "@/components/landing/CTA";
+import { Footer } from "react-day-picker";
 
 export default function Home() {
   return (
     <>
-      <Show when="signed-out">
-
-        <SignUpButton mode="modal">
-          <button className="bg-purple-700 text-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
-            Sign Up
-          </button>
-        </SignUpButton>
-      </Show>
-      <Show when="signed-in">
-        <UserButton />
-      </Show>
+    <div className="min-h-screen bg-background">
+      <Header/>
+      <Hero/>
+      <HowItWorks/>
+      <WhatToAsk/>
+      <PricingSection/>
+      <CTA/>
+      <Footer/>
+    </div>
     </>
   );
 }
