@@ -4,7 +4,7 @@ import Hero from "@/components/landing/Hero";
 import WhatToAsk from "@/components/landing/WhatToAsk";
 import PricingSection from "@/components/landing/PricingSection";
 import CTA from "@/components/landing/CTA";
-import { Footer } from "react-day-picker";
+import Footer from "@/components/landing/Footer";
 
 export default function Home() {
   return (
