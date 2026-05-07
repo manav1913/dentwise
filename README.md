@@ -1,7 +1,9 @@
 # DentiQ 🦷
 
 AI-powered dental appointment management platform built with Next.js, Prisma, Clerk authentication, and Supabase.
+# Live Demo
 
+[https://denti-q.vercel.app/](https://denti-q.vercel.app/)
 ## Overview
 
 DentiQ is a modern dental management application that allows patients to book appointments, interact with an AI voice assistant, and manage their dental visits through a clean dashboard experience. It also includes an admin panel for managing doctors and appointments.
@@ -202,9 +204,7 @@ Capabilities include:
 
 ---
 
-# Live Demo
 
-[https://denti-q.vercel.app/dashboard](https://denti-q.vercel.app/dashboard)
 
 ---
 
