@@ -19,8 +19,8 @@ export async function getDoctors() {
       appointmentCount: doctor._count.appointments,
     }));
   } catch (error) {
-    console.log("Error fetching doctors:", error);
-    throw new Error("Failed to fetch doctors");
+    console.error(error);
+    return [];
   }
 }
 
