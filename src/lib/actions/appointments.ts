@@ -59,9 +59,9 @@ export async function getUserAppointments() {
 
     return appointments.map(transformAppointment);
   } catch (error) {
-    console.error("Error fetching user appointments:", error);
-    throw new Error("Failed to fetch user appointments");
-  }
+  console.error("Error fetching user appointments:", error);
+  return [];
+}
 }
 
 export async function getUserAppointmentStats() {
@@ -90,10 +90,14 @@ export async function getUserAppointmentStats() {
       totalAppointments: totalCount,
       completedAppointments: completedCount,
     };
-  } catch (error) {
-    console.error("Error fetching user appointment stats:", error);
-    return { totalAppointments: 0, completedAppointments: 0 };
-  }
+  }catch (error) {
+  console.error("Error fetching user appointment stats:", error);
+
+  return {
+    totalAppointments: 0,
+    completedAppointments: 0,
+  };
+}
 }
 
 export async function getBookedTimeSlots(doctorId: string, date: string) {
