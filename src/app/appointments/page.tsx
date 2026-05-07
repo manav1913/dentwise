@@ -161,12 +161,8 @@ function AppointmentsPage() {
             {userAppointments.map((appointment) => (
               <div key={appointment.id} className="bg-card border rounded-lg p-4 shadow-sm">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="size-10 bg-primary/10 rounded-full flex items-center justify-center">
-                    <img
-                      src={appointment.doctorImageUrl}
-                      alt={appointment.doctorName}
-                      className="size-10 rounded-full"
-                    />
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-yellow-400 to-orange-500 text-sm font-bold text-white shadow-md">
+                    {appointment.doctorName?.charAt(0).toUpperCase() || "D"}
                   </div>
                   <div>
                     <p className="font-medium text-sm">{appointment.doctorName}</p>
