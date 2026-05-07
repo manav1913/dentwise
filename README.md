@@ -1,36 +1,213 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DentiQ 🦷
 
-## Getting Started
+AI-powered dental appointment management platform built with Next.js, Prisma, Clerk authentication, and Supabase.
 
-First, run the development server:
+## Overview
+
+DentiQ is a modern dental management application that allows patients to book appointments, interact with an AI voice assistant, and manage their dental visits through a clean dashboard experience. It also includes an admin panel for managing doctors and appointments.
+
+## Features
+
+### Patient Features
+
+* AI voice assistant experience
+* Secure authentication with Clerk
+* Book dental appointments
+* View upcoming appointments
+* Appointment history tracking
+* Dental health overview dashboard
+* Responsive modern UI
+
+### Admin Features
+
+* Manage doctors
+* View all appointments
+* Update appointment statuses
+* Doctor availability management
+* Admin analytics dashboard
+
+## Tech Stack
+
+### Frontend
+
+* Next.js 15
+* React 19
+* TypeScript
+* Tailwind CSS
+* shadcn/ui
+
+### Backend
+
+* Prisma ORM
+* Supabase PostgreSQL
+* Clerk Authentication
+* Server Actions
+
+### Other Integrations
+
+* Vapi AI
+* Resend Email API
+
+---
+
+# Screenshots
+
+Add your screenshots here.
+
+```md
+![Dashboard](./public/dashboard.png)
+```
+
+---
+
+# Getting Started
+
+## 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/dentiq.git
+cd dentiq
+```
+
+## 2. Install dependencies
+
+```bash
+npm install
+```
+
+## 3. Setup environment variables
+
+Create a `.env` file in the root directory.
+
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+DATABASE_URL=
+NEXT_PUBLIC_VAPI_API_KEY=
+NEXT_PUBLIC_VAPI_ASSISTANT_ID=
+RESEND_API_KEY=
+```
+
+---
+
+# Database Setup
+
+## Prisma
+
+Generate Prisma client:
+
+```bash
+npx prisma generate
+```
+
+Push schema to database:
+
+```bash
+npx prisma db push
+```
+
+---
+
+# Running Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```txt
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+# Production Build
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Deployment
 
-## Deploy on Vercel
+The project is optimized for deployment on Vercel.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Vercel Setup
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Import GitHub repository into Vercel
+2. Add environment variables
+3. Deploy
+
+## Important
+
+For Supabase on Vercel, use the Transaction Pooler connection string:
+
+```env
+DATABASE_URL=postgresql://...pooler.supabase.com:6543/postgres?pgbouncer=true
+```
+
+---
+
+# Project Structure
+
+```txt
+src/
+ ├── app/
+ ├── components/
+ ├── hooks/
+ ├── lib/
+ │    ├── actions/
+ │    ├── prisma.ts
+ │    └── utils.ts
+ └── middleware.ts
+```
+
+---
+
+# Authentication
+
+Authentication is handled using Clerk.
+
+Protected routes:
+
+* Dashboard
+* Appointments
+* Admin Panel
+* Voice Assistant
+
+---
+
+# AI Voice Assistant
+
+DentiQ integrates Vapi AI for conversational dental assistance.
+
+Capabilities include:
+
+* Appointment assistance
+* Basic dental guidance
+* Voice interaction experience
+
+---
+
+# Future Improvements
+
+
+* SMS reminders
+* Video consultations
+* Multi-clinic support
+* Appointment calendar sync
+* AI-powered dental reports
+
+---
+
+# Live Demo
+
+[https://denti-q.vercel.app/dashboard](https://denti-q.vercel.app/dashboard)
+
+---
+
+# Author
+
+Built by Manav.
