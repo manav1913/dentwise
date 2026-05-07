@@ -87,7 +87,7 @@ const Footer = () => {
 
         <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
           <p>
-            &copy; {new Date().getFullYear()} DentWise. Built for real people with real dental questions.
+            &copy; {new Date().getFullYear()} DentiQ. Built for real people with real dental questions.
           </p>
         </div>
       </div>

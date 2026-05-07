@@ -89,7 +89,7 @@ export function DoctorSelectionStep({
               <div className="space-y-2">
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <MapPinIcon className="w-4 h-4 shrink-0" />
-                  <span>DentWise Dental Clinic</span>
+                  <span>DentiQ Dental Clinic</span>
                 </div>
 
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
