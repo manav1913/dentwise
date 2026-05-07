@@ -5,6 +5,16 @@ import { AppointmentStatus } from "@prisma/client";
 import { prisma } from "../prisma";
 
 function transformAppointment(appointment: any) {
+  let formattedDate = "";
+
+  try {
+    formattedDate = new Date(appointment.date)
+      .toISOString()
+      .split("T")[0];
+  } catch {
+    formattedDate = "";
+  }
+
   return {
     ...appointment,
     patientName: `${appointment.user.firstName || ""} ${
@@ -13,7 +23,7 @@ function transformAppointment(appointment: any) {
     patientEmail: appointment.user.email,
     doctorName: appointment.doctor.name,
     doctorImageUrl: appointment.doctor.imageUrl || "",
-    date: appointment.date.toISOString().split("T")[0],
+    date: formattedDate,
   };
 }
 
