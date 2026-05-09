@@ -14,15 +14,21 @@ export default async function Home() {
   if (user) redirect("/dashboard")
   return (
     <>
-    <div className="min-h-screen bg-background">
-      <Header/>
-      <Hero/>
-      <HowItWorks/>
-      <WhatToAsk/>
-      <PricingSection/>
-      <CTA/>
-      <Footer/>
-    </div>
+      <div className="min-h-screen bg-background">
+        <Header />
+        <Hero />
+        <section id="how-it-works">
+          <HowItWorks />
+        </section>
+        <WhatToAsk />
+        <section id="pricing">
+          <PricingSection />
+        </section>
+        <CTA />
+        <section id="about">
+          <Footer />
+        </section>
+      </div>
     </>
   );
 }
