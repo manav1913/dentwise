@@ -22,11 +22,11 @@ DentiQ lets patients **chat with an AI voice assistant** about their dental symp
 
 Admins get a separate dashboard to manage doctors, view all appointments, and update statuses in real time.
 
+## Live:https://denti-q.vercel.app/
 ---
 
 ## Screenshots
 
-> **Take these 5 screenshots and drop them in `/public/screenshots/` — then this section is done.**
 
 ### Landing Page
 ![Landing Page](./public/screenshots/landing.png)
